@@ -1,9 +1,17 @@
+# xpath => //tagname[@attribute='value']
+# xpath => //tagName[contains(@attribute,'value')]
+
+# css_selector => tagname[attribute='value']
+# css_selector => tagName#id
+# css_selector => tagname.classname
+# css_selector => tagName[Atrribute*='value']
+
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # init driver
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path='C:\\Users\\zahid\\OneDrive\\Documents\\Automation\\python-selenium-automation\\chromedriver')
 driver.maximize_window()
 
 # open the url

@@ -1,0 +1,20 @@
+Amazon logo, search by XPATH, "//i[@class='a-icon a-icon-logo']"
+
+Email field, search by ID, "ap_email"
+
+Continue button, search by XPATH, "//input[@id='continue']"
+
+Need help link, search by XPATH, "//span[contains(text(),'Need help?')]"
+
+Forgot your password link, search by ID, "auth-fpp-link-bottom"
+
+Other issues with Sign-In link, search by CSS_SELECTOR, "#ap-other-signin-issues-link"
+
+Create your Amazon account button, search by ID, "createAccountSubmit"
+
+*Conditions of use link, search by linkText, "Conditions of Use"
+
+*Privacy Notice link, search by linkText, "Privacy Notice"
+
+
+
