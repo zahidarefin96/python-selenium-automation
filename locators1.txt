@@ -1,0 +1,22 @@
+# css_selector => tagname[attribute='value']
+# css_selector => tagName#id
+# css_selector => tagname.classname
+# css_selector => tagName[Atrribute*='value']
+
+Amazon logo, search by CSS_SELECTOR, "i[class='a-icon a-icon-logo']"
+
+Email field, search by CSS_SELECTOR, "#ap_email"
+
+Continue button, search by CSS_SELECTOR, "#continue"
+
+Need help link, search by CSS_SELECTOR, "span[class='a-expander-prompt']"
+
+Forgot your password link, search by CSS_SELECTOR, "#auth-fpp-link-bottom"
+
+Other issues with Sign-In link, search by CSS_SELECTOR, "#ap-other-signin-issues-link"
+
+Create your Amazon account button, search by CSS_SELECTOR, "#createAccountSubmit"
+
+*Conditions of use link, search by linkText, "Conditions of Use"
+
+*Privacy Notice link, search by linkText, "Privacy Notice"
