@@ -40,4 +40,5 @@ def search_box(context):
 def body_links_count(context, expected_count):
     expected_count = int(expected_count)
     browse_links_count = len(context.driver.find_elements(*BROWSE_HELP_LINKS))
+
     assert browse_links_count == 12, f'expected {expected_count} links, but got {body_links_count}'

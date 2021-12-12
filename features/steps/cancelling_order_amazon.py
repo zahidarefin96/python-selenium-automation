@@ -1,5 +1,5 @@
-from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 
@@ -24,5 +24,3 @@ def verify(context):
     expected_result = "Cancel Items or Orders"
 
     assert actual_result == expected_result, f'Error, actual {actual_result} did not match {expected_result}'
-
-    context.driver.quit()

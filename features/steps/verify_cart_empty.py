@@ -1,5 +1,5 @@
-from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.common.by import By
 
 
 @given('Open Amazon Home page')
@@ -18,5 +18,3 @@ def verify(context):
     expected_result = "Your Amazon Cart is empty"
 
     assert actual_result == expected_result, f'Error, actual {actual_result} did not match {expected_result}'
-
-    context.driver.quit()

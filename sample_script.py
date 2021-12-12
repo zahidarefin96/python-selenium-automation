@@ -7,11 +7,13 @@
 # css_selector => tagName[Atrribute*='value']
 
 from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 # init driver
-driver = webdriver.Chrome(executable_path='C:\\Users\\zahid\\OneDrive\\Documents\\Automation\\python-selenium-automation\\chromedriver')
+driver = webdriver.Chrome(
+    executable_path='C:\\Users\\zahid\\OneDrive\\Documents\\Automation\\python-selenium-automation\\chromedriver')
 driver.maximize_window()
 
 # open the url

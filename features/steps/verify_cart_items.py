@@ -43,4 +43,5 @@ def open_cart_page(context):
 def verify_count(context, expected_count):
     actual_count = context.driver.find_element(*CART_COUNT).text
     expected_count = "Subtotal (1 item):"
+
     assert actual_count == expected_count, f'Error, actual {actual_count} did not match {expected_count}'
