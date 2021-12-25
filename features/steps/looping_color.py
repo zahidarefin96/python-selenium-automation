@@ -76,3 +76,5 @@ def verify_product(context):
 
     for elements in (product_name_1 and product_name_2):
         print(elements.text)
+
+        assert elements, 'Expected non-empty product name'
