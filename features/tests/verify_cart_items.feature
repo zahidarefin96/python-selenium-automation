@@ -2,8 +2,8 @@
 Feature: Test Scenarios for Cart functionality on Amazon
 
   Scenario: User can add a product to the cart
-    Given Open Amazon page
-    When Search for amazon basics water bottle
+    Given Open Amazon main-page
+    When type in search amazon basics water bottle
     And Click search icon
     And Click on the first product
     And Click on Add to Cart icon

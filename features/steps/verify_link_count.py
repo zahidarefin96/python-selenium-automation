@@ -6,11 +6,11 @@ BEST_SELLERS_HEADER_LINK = (By.XPATH, "//div[@class='_p13n-zg-nav-tab-all_style_
 
 
 # this step is already defined in verify_cart_items.py file
-# @given('Open Amazon page')
+# @given('Open Amazon main-page')
 # def open_amazon_home_page(context):
 #     context.driver.get('https://www.amazon.com/')
 
-@given('Open Amazon BestSellers page')
+@given('Open Amazon best-sellers page')
 def open_amazon_bestsellers_page(context):
     context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
     context.driver.refresh()

@@ -9,12 +9,12 @@ CART_ICON = (By.XPATH, "//a[@id='nav-cart']")
 CART_COUNT = (By.XPATH, "//span[@id='sc-subtotal-label-activecart']")
 
 
-@given('Open Amazon page')
+@given('Open Amazon main-page')
 def open_amazon(context):
     context.driver.get('https://www.amazon.com/ref=nav_logo')
 
 
-@when('Search for amazon basics water bottle')
+@when('type in search amazon basics water bottle')
 def search_icon(context):
     context.driver.find_element(*WATER_BOTTLE).send_keys("amazon basics water bottle")
 

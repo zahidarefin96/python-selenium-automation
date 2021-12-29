@@ -7,19 +7,8 @@ PRIVACY_LINK = (By.LINK_TEXT, "Privacy Notice")
 PRIVACY_NOTICE = (By.XPATH, "//h1[contains(text(),'Amazon.com Privacy Notice')]")
 
 # Scenario 2
-BEST_SELLERS_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
-
-NEW_RELEASES_LINK = (By.LINK_TEXT, "New Releases")
-NEW_RELEASES_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
-
-MOVERS_SHAKERS_LINK = (By.LINK_TEXT, "Movers & Shakers")
-MOVERS_SHAKERS_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
-
-MOST_WISHED_FOR_LINK = (By.LINK_TEXT, "Most Wished For")
-MOST_WISHED_FOR_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
-
-GIFT_IDEAS_LINK = (By.LINK_TEXT, "Gift Ideas")
-GIFT_IDEAS_TITLE = (By.XPATH, "//span[@id='zg_banner_text']")
+TOP_LINKS = (By.CSS_SELECTOR, "#zg_header a")
+HEADER = (By.CSS_SELECTOR, "#zg_banner_text")
 
 
 @given("Open Amazon T&C page")
@@ -28,11 +17,11 @@ def open_page(context):
         "https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088")
 
 
-# this step is already defined in verify_cart_count.py file
-# @given('Open Amazon BestSellers page')
-# def open_amazon_bestsellers_page(context):
-#     context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
-#     context.driver.refresh()
+@given('Open Amazon BestSellers page')
+def open_amazon_bestsellers_page(context):
+    # context.driver.get('https://www.amazon.com/gp/bestsellers/')
+    # context.driver.refresh()
+    context.app.bestsellers_page.open()
 
 
 @when("Store original windows")
@@ -68,36 +57,5 @@ def switch_back_to_original(context):
 
 
 @then("click each top link and verifies that new page opens")
-def click_link(context):
-    # Best Sellers
-    best_sellers_title = context.driver.find_element(*BEST_SELLERS_TITLE)
-    print(best_sellers_title.text)
-    assert "Amazon Best Sellers" in best_sellers_title.text
-
-    # New Releases
-    new_releases_link = context.driver.find_element(*NEW_RELEASES_LINK)
-    new_releases_link.click()
-    new_releases_title = context.driver.find_element(*NEW_RELEASES_TITLE)
-    print(new_releases_title.text)
-    assert "Amazon Hot New Releases" in new_releases_title.text
-
-    # Movers & Shakers
-    movers_shakers_link = context.driver.find_element(*MOVERS_SHAKERS_LINK)
-    movers_shakers_link.click()
-    movers_shakers_title = context.driver.find_element(*MOVERS_SHAKERS_TITLE)
-    print(movers_shakers_title.text)
-    assert "Amazon Movers & Shakers" in movers_shakers_title.text
-
-    # Most Wished For
-    most_wished_link = context.driver.find_element(*MOST_WISHED_FOR_LINK)
-    most_wished_link.click()
-    most_wished_title = context.driver.find_element(*MOST_WISHED_FOR_TITLE)
-    print(most_wished_title.text)
-    assert "Amazon Most Wished For" in most_wished_title.text
-
-    # Gift Ideas
-    gift_ideas_link = context.driver.find_element(*GIFT_IDEAS_LINK)
-    gift_ideas_link.click()
-    gift_ideas_title = context.driver.find_element(*GIFT_IDEAS_TITLE)
-    print(gift_ideas_title.text)
-    assert "Amazon Gift Ideas" in gift_ideas_title.text
+def click_thru_top(context):
+    context.app.bestsellers_page.click_thru_top()
