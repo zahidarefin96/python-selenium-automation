@@ -11,17 +11,12 @@ TOP_LINKS = (By.CSS_SELECTOR, "#zg_header a")
 HEADER = (By.CSS_SELECTOR, "#zg_banner_text")
 
 
+# Scenario 1
+
 @given("Open Amazon T&C page")
 def open_page(context):
     context.driver.get(
         "https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088")
-
-
-@given('Open Amazon BestSellers page')
-def open_amazon_bestsellers_page(context):
-    # context.driver.get('https://www.amazon.com/gp/bestsellers/')
-    # context.driver.refresh()
-    context.app.bestsellers_page.open()
 
 
 @when("Store original windows")
@@ -54,6 +49,15 @@ def verify_amazon_privacy(context):
 def switch_back_to_original(context):
     context.driver.close()
     context.driver.switch_to.window(context.original_window)
+
+
+# Scenario 2
+
+@given('Open Amazon BestSellers page')
+def open_amazon_bestsellers_page(context):
+    # context.driver.get('https://www.amazon.com/gp/bestsellers/')
+    # context.driver.refresh()
+    context.app.bestsellers_page.open()
 
 
 @then("click each top link and verifies that new page opens")
