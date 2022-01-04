@@ -13,6 +13,7 @@ class Header(Page):
     FLAG = (By.CSS_SELECTOR, ".icp-nav-flag.icp-nav-flag-us")
     SPANISH_LANG = (By.CSS_SELECTOR, "[href='#switch-lang=es_US']")
     DEPARTMENT_DROPDOWN = (By.ID, "searchDropdownBox")
+    NEW_ARRIVALS_LINK = (By.XPATH, "//span[contains(text(),'New Arrivals')]")
 
     def search_input(self, text):
         self.input_text(text, *self.SEARCH_INPUT)
@@ -28,6 +29,12 @@ class Header(Page):
 
     def hover_lang(self):
         flag = self.find_element(*self.FLAG)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(flag)
+        actions.perform()
+
+    def hover_new_arrivals_link(self):
+        flag = self.find_element(*self.NEW_ARRIVALS_LINK)
         actions = ActionChains(self.driver)
         actions.move_to_element(flag)
         actions.perform()

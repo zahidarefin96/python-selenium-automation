@@ -12,5 +12,3 @@ class ProductSearch(Page):
 
     def add_cart_icon(self):
         self.find_element(*self.ADD_TO_CART).click()
-
-
