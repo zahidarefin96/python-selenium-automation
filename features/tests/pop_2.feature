@@ -1,5 +1,5 @@
 # Created by zahid at 1/3/2022
-Feature: # Enter feature name here
+Feature: Tests for select, search and hover elements
 
 #  Scenario 1
   Scenario: User can select and search in a department
