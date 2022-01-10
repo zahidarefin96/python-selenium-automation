@@ -5,6 +5,8 @@ from selenium.webdriver.common.keys import Keys
 # init driver
 driver = webdriver.Chrome(
     executable_path='C:\\Users\\zahid\\OneDrive\\Documents\\Automation\\python-selenium-automation\\chromedriver')
+# driver = webdriver.Edge(
+#         executable_path='C:\\Users\\zahid\\OneDrive\\Documents\\Automation\\python-selenium-automation\\msedgedriver')
 driver.maximize_window()
 
 # open the url
